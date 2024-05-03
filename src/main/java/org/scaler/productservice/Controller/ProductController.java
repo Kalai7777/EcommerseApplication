@@ -20,6 +20,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable("id") long id){
         return ps.getProductById(id);
+        //homework - get all product
     }
 
     @GetMapping("/")
