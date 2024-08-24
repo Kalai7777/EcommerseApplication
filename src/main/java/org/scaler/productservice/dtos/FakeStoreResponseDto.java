@@ -8,7 +8,7 @@ public class FakeStoreResponseDto {
     public long id;
     private String title;
     private double price;
-    private String desc;
+    private String description;
     private String image;
     private String category;
 }

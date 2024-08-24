@@ -1,9 +1,20 @@
 package org.scaler.productservice.Models;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-public class Category {
-    private long id;
+import java.util.List;
+
+@Entity
+@Getter
+@Setter
+public class Category extends BaseModel{
+
     private String title;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private List<Product> products;
 }
